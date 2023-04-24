@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #212121;
+    --green: #09A494;
+    --white: #FFFFFF;
+}
+
+.container {
+    min-width: 320px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body{
+    /* Обычный текст — Open Sans Regular 20/150 */
+
+    /* Text/main/desktop */
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+    /* black */
+    color: var(--black);
+
+    /* Inside auto layout */
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+}
+
+footer{
+    color: var(--white);
+    background-color: var(--black);
+}
+
+h1{
+    /* H1 — Open Sans Bold 60/110 */
+    
+    /* Headings/H1/desktop */
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 110%;
+    /* identical to box height, or 66px */
+    
+    /* black */
+    color: #212121;
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+h2{
+    /* H2 —Open Sans Bold 30/120 */
+
+    /* Headings/H2/desktop */
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    /* identical to box height, or 36px */
+
+    /* black */
+    color: #212121;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+h3{
+    /* H3 —Open Sans Bold 24/120 */
+
+    /* Headings/H3/desktop */
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+
+    /* black */
+    color: #212121;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+button{
+    /* Текст в кнопках и ссылках — Open Sans Regular 20/100 */
+
+    /* Text/interface/desktop */
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+
+    /* black */
+    color: #212121;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+}
+
+a{
+    /* Текст в кнопках и ссылках — Open Sans Regular 20/100 */
+
+    /* Text/interface/desktop */
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+
+    /* black */
+    color: #212121;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+}
+
+subtitle{
+    /* Подзаголовок главной страницы — Open Sans Regular 38/120 */
+
+    /* Subtitle/main/desktop */
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 120%;
+    /* or 46px */
+
+    /* green */
+    color: #09A494;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
