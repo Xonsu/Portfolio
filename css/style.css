@@ -1,40 +1,23 @@
 *,
 *::before,
-*::after {
+*::after{
     box-sizing: border-box;
 }
 
-:root {
+:root{
     --black: #212121;
     --green: #09A494;
     --white: #FFFFFF;
 }
 
-.container {
-    min-width: 320px;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 body{
-    /* Обычный текст — Open Sans Regular 20/150 */
-
-    /* Text/main/desktop */
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
-    /* identical to box height, or 30px */
 
-    /* black */
     color: var(--black);
-
-    /* Inside auto layout */
-    flex: none;
-    order: 4;
-    flex-grow: 0;
 }
 
 footer{
@@ -43,121 +26,212 @@ footer{
 }
 
 h1{
-    /* H1 — Open Sans Bold 60/110 */
-    
-    /* Headings/H1/desktop */
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
     line-height: 110%;
-    /* identical to box height, or 66px */
-    
-    /* black */
-    color: #212121;
-    
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+
+    color: var(--black);
 }
 
 h2{
-    /* H2 —Open Sans Bold 30/120 */
 
-    /* Headings/H2/desktop */
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 120%;
-    /* identical to box height, or 36px */
 
-    /* black */
-    color: #212121;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 2;
-    flex-grow: 0;
+    color: var(--black);
 }
 
 h3{
-    /* H3 —Open Sans Bold 24/120 */
-
-    /* Headings/H3/desktop */
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
-    /* identical to box height, or 29px */
 
-    /* black */
-    color: #212121;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 3;
-    flex-grow: 0;
+    color: var(--black);
 }
 
 button{
-    /* Текст в кнопках и ссылках — Open Sans Regular 20/100 */
-
-    /* Text/interface/desktop */
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
-    /* identical to box height, or 20px */
 
-    /* black */
-    color: #212121;
+    color: var(--black);
 
-    /* Inside auto layout */
-    flex: none;
-    order: 5;
-    flex-grow: 0;
+    padding: 6px 10px 10px;
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    color: var(--green);
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+button:hover{
+    color: var(--white);
+    background-color: var(--green);
 }
 
 a{
-    /* Текст в кнопках и ссылках — Open Sans Regular 20/100 */
-
-    /* Text/interface/desktop */
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
-    /* identical to box height, or 20px */
 
-    /* black */
-    color: #212121;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 5;
-    flex-grow: 0;
+    color: var(--black);
 }
 
-subtitle{
-    /* Подзаголовок главной страницы — Open Sans Regular 38/120 */
+.social{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 
-    /* Subtitle/main/desktop */
+.social li{
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}   
+
+.social-link{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-link:hover{
+    background: var(--green);
+}
+
+.social-link_github{
+    background-image: url("/img/github.svg");
+}
+
+.social-link_VK{
+    background-image: url("/img/vk.svg");
+}
+
+.subtitle{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 38px;
     line-height: 120%;
-    /* or 46px */
 
-    /* green */
-    color: #09A494;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    color: var(--green);
 }
+
+.container{
+    min-width: 320px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--black);
+    padding: 10px 15px;
+
+}
+
+.main-nav a:hover{
+    color: var(--green);
+}
+
+.intro img{
+    border-radius: 50%;
+}
+
+.contact{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.contact li{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-link{
+    display: block;
+    padding: 42px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.contact-link_phone{
+    background-image: url("/img/phone.svg")
+}
+
+.contact-link_mail{
+    background-image: url("/img/email.svg")
+}
+
+.skill-list {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+    .skill-list dt {
+    margin-bottom: 6px;
+    padding: 5px 0 5px 38px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    }
+    .skill-level {
+    margin: 4px 0 16px;
+    padding: 2px;
+    font-size: 0;
+    border: 1px solid var(--black);
+    border-radius: 16px;
+    }
+    .skill-level div {
+    height: 14px;
+    background-color: var(--green);
+    border-radius: 8px;
+    }
+    .skill-item {
+    text-transform: lowercase;
+    }
+    .skill-item_html {
+    background-image: url("../img/html.svg");
+    }
+    .skill-item_css {
+    background-image: url("../img/css.svg");
+    }
+    .skill-item_cpp {
+    background-image: url("../img/c++.svg");
+    }
+    .skill-item_php {
+    background-image: url("../img/php.svg");
+    }

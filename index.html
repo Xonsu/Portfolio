@@ -14,9 +14,9 @@
 </head>
 <body>
     <div class="container">
-        <header> 
+        <header class="main-header"> 
             <img src="img/main-logo.svg" alt="Логотип сайта" width="60" height="60">
-            <nav> 
+            <nav class="main-nav"> 
                 <a href="#about">Обо мне</a>
                 <a href="#skills">Навыки</a>
                 <a href="#interests">Интересы</a>
@@ -25,13 +25,13 @@
         </header>
         
         <main>
-        <section id="intro"> 
+        <section class="intro" id="intro"> 
             <h1>Кулеш Никита</h1>
-            <p>Программист</p>
+            <p class="subtitle">Программист</p>
             <img src="img/user-photo.jpg" alt="Фотография пользователя" width="400" height="400">
         </section>
 
-        <section id="about"> 
+        <section class="about "id="about"> 
             <h2>Пара слов обо мне</h2>
             <p>Привет ✌</p>
             <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана 
@@ -41,60 +41,60 @@
                 но в будущем планирую стать разработчиком сложных программных комплексов и систем.</p>
         </section>
 
-        <section id="skills"> 
+        <section class="skills" id="skills"> 
             <h2>Мои навыки</h2>
             <div> 
                 Сортировать
                 <button>по названию</button>
                 <button>по уровню</button>
             </div>
-            <dl>
-                <dt>html</dt>
-                <dd>
+            <dl class="skill-list">
+                <dt class="skill-item skill-item_html">html</dt>
+                <dd class ="skill-level">
+                    <div style="width: 50%;">50%</div>
+                </dd>
+
+                <dt class="skill-item skill-item_css">css</dt>
+                <dd class ="skill-level">
                     <div style="width: 40%;">40%</div>
                 </dd>
 
-                <dt>css</dt>
-                <dd>
-                    <div style="width: 40%;">40%</div>
+                <dt class="skill-item skill-item_cpp">c++</dt>
+                <dd class ="skill-level">
+                    <div style="width: 70%;">70%</div>
                 </dd>
 
-                <dt>c++</dt>
-                <dd>
-                    <div style="width: 40%;">40%</div>
-                </dd>
-
-                <dt>c#</dt>
-                <dd>
-                    <div style="width: 40%;">40%</div>
+                <dt class="skill-item skill-item_php">php</dt>
+                <dd class ="skill-level">
+                    <div style="width:20%;">20%</div>
                 </dd>
             </dl>
         </section>
 
-        <section id="interests"> 
+        <section class="interests" id="interests"> 
             <h2>Мои интересы</h2>
             <p>Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного интеллекта.</p>
             <p>Но помимо учёбы и работы я также люблю играть на барабанах и читать зарубежную классику.</p>
         </section>
 
-        <section id="contacts">
+        <section class="contacts" id="contacts">
             <h2>Мои контакты</h2>
             
-            <ul>
-                <li><a href="tel:+79991234567">+7 999 123-45-67</a></li>
-                <li><a href="mailto:email@mail.ru">email@mail.ru</a></li>
+            <ul class="contact">
+                <li><a class="contact-link contact-link_phone" href="tel:+79991234567">+7 999 123-45-67</a></li>
+                <li><a class="contact-link contact-link_mail" href="mailto:email@mail.ru">email@mail.ru</a></li>
             </ul>
             
-            <ul>
-                <li><a href="https://github.com/Xonsu/Portfolio">GitHub</a></li>
-                <li><a href="https://vk.com/id415025423">VK</a></li>
+            <ul class="social">
+                <li><a class="social-link social-link_github" href="https://github.com/Xonsu/Portfolio"><span class="visually-hidden">GitHub</span></a></li>
+                <li><a class="social-link social-link_VK" href="https://vk.com/id415025423"><span class="visually-hidden">VK</span></a></li>
             </ul>
 
         </section>
 
         </main>
     </div>
-    <footer>
+    <footer class="main-footer">
         <div class="container">
             <p>© 2023 Кулеш Никита</p>
         </div>
