@@ -129,11 +129,11 @@ a{
 }
 
 .social-link_github{
-    background-image: url("/img/github.svg");
+    background-image: url("../img/github.svg");
 }
 
 .social-link_VK{
-    background-image: url("/img/vk.svg");
+    background-image: url("../img/vk.svg");
 }
 
 .subtitle{
@@ -189,11 +189,11 @@ a{
 }
 
 .contact-link_phone{
-    background-image: url("/img/phone.svg")
+    background-image: url("../img/phone.svg")
 }
 
 .contact-link_mail{
-    background-image: url("/img/email.svg")
+    background-image: url("../img/email.svg")
 }
 
 .skill-list {
