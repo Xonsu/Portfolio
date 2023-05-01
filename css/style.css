@@ -189,11 +189,11 @@ a{
 }
 
 .contact-link_phone{
-    background-image: url("../img/phone.svg")
+    background-image: url("../img/phone.svg");
 }
 
 .contact-link_mail{
-    background-image: url("../img/email.svg")
+    background-image: url("../img/email.svg");
 }
 
 .skill-list {
