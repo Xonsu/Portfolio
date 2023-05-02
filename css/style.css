@@ -36,7 +36,6 @@ h1{
 }
 
 h2{
-
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -126,13 +125,15 @@ a{
 
 .social-link:hover{
     background: var(--green);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.social-link_github{
+.social-link_github, .social-link_github:hover{
     background-image: url("../img/github.svg");
 }
 
-.social-link_VK{
+.social-link_VK, .social-link_VK:hover{
     background-image: url("../img/vk.svg");
 }
 
@@ -186,6 +187,11 @@ a{
     padding: 42px;
     background-repeat: no-repeat;
     background-position: left;
+    text-decoration: none;
+}
+
+.contact-link:hover{
+    color: var(--green);
 }
 
 .contact-link_phone{
