@@ -35,12 +35,14 @@ body{
     margin-bottom: 120px;
 }
 
+.main-nav{
+    display: flex;
+}
+
 .main-nav a{
-    display: inline-flex;
     text-decoration: none;
     color: var(--black);
     padding: 10px 15px;
-
 }
 
 .main-nav a:hover{
@@ -67,8 +69,6 @@ body{
 }
 
 .about{
-    display: flex;
-    flex-direction: column;
     padding: 0;
     margin: 0;
     margin-bottom: 120px;
@@ -83,6 +83,18 @@ body{
     justify-content: space-between;
     padding: 0;
     margin: 0;
+    margin-bottom: 40px;
+    gap: 40px;
+}
+
+.div-skills h2{
+    margin: 0;
+    padding: 0;
+}
+
+.flex-buttons{
+    display: flex;
+    align-items: center;
 }
 
 .skills{
@@ -91,8 +103,6 @@ body{
 }
 
 .interests{
-    display: flex;
-    flex-direction: column;
     padding: 0;
     margin: 0;
     margin-bottom: 120px;
@@ -178,7 +188,6 @@ a{
 
 .social{
     display: flex;
-    flex-direction: row;
     gap: 20px;
     margin: 0;
     padding: 0;
@@ -241,7 +250,7 @@ a{
 .container{
     min-width: 320px;
     max-width: 1280px;
-    margin: 0 auto; /*227px*/
+    margin: 0 227px; /*227px*/
     padding: 0 20px;
 }
 
@@ -258,9 +267,10 @@ a{
     display: flex;
     flex-direction: row;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding: 0;
     list-style-type: none;
+    gap: 40px;
 }
 
 .contact li{
@@ -271,7 +281,7 @@ a{
 
 .contact-link{
     display: block;
-    padding: 10px 42px;
+    padding: 5px 0 5px 42px;
     background-repeat: no-repeat;
     background-position: left;
     text-decoration: none;
@@ -302,7 +312,7 @@ a{
     background-size: 30px;
 }
 .skill-level {
-    margin: 4px 0 18px;
+    margin: 4px 0 17px;
     padding: 2px;
     font-size: 0;
     border: 1px solid var(--black);
