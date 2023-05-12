@@ -250,7 +250,7 @@ a{
 .container{
     min-width: 320px;
     max-width: 1280px;
-    margin: 0 227px; /*227px*/
+    margin: 0 auto; /*227px*/
     padding: 0 20px;
 }
 
