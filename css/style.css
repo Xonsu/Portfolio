@@ -95,7 +95,8 @@ body{
 .flex-buttons{
     display: flex;
     align-items: center;
-}
+    gap: 20px;
+}   
 
 .skills{
     margin: 0;
@@ -166,9 +167,6 @@ button{
     background-color: transparent;
     cursor: pointer;
     text-transform: lowercase;
-
-    margin: 0;
-    margin-left: 20px;
 }
 
 button:hover{
@@ -265,7 +263,6 @@ a{
 
 .contact{
     display: flex;
-    flex-direction: row;
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
