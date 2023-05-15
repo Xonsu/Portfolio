@@ -81,6 +81,7 @@ body{
 .div-skills{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
     margin-bottom: 40px;
@@ -186,6 +187,7 @@ a{
 
 .social{
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     margin: 0;
     padding: 0;
@@ -263,6 +265,7 @@ a{
 
 .contact{
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
@@ -334,4 +337,265 @@ a{
 }
 .skill-item_php {
     background-image: url("../img/php.svg");
+}
+
+.nav-btn{
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+        font-size: 16px;
+    }
+    
+    h1{
+        font-size: 50px;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+    
+    h3{
+        font-size: 18px;
+    }
+    
+    .subtitle{
+        font-size: 28px;
+    }
+
+    button{
+        font-size: 16px;
+    }
+
+    a{
+        font-size: 16px;
+    }
+
+    .intro img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .main-header{
+        margin-bottom: 80px;
+    }
+
+    .intro{
+        margin-bottom: 80px;
+    }
+    
+    .about{
+        margin-bottom: 80px;
+    }
+    
+    .skills{
+        margin-bottom: 80px;
+    }
+
+    .interests{
+        margin-bottom: 80px;
+    }
+
+    .contacts{
+        margin-bottom: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 650px) {
+    body{
+        font-size: 14px;
+    }
+    
+    h1{
+        font-size: 32px;
+    }
+
+    h2{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+    h3{
+        font-size: 16px;
+    }
+    
+    .subtitle{
+        font-size: 20px;
+    }
+
+    button{
+        font-size: 14px;
+    }
+
+    a{
+        font-size: 14px;
+    }
+
+    .main-header{
+        flex-direction: column;
+        padding-top: 20px;
+        margin-bottom: 60px;
+        gap: 20px;
+    }
+
+    .main-header img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-nav{
+        flex-direction: column;
+    }
+
+    .main-nav a{
+        padding: 20px 30px;
+        text-align: center;
+    }
+
+    .nav-btn{
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-btn_close{
+        background-image: url("../img/close.svg");
+    }
+
+    .nav-btn_open{
+        background-image: url("../img/burger.svg");
+
+    }
+
+    .main-header-wrap
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .intro{
+        flex-direction: column-reverse;
+        gap: 30px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .intro img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .intro h1{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .about{
+        margin-bottom: 60px;
+    }
+
+    .skills{
+        margin-bottom: 60px;
+    }
+
+    .div-skills{
+        margin-bottom: 30px;
+        align-items: center;
+    }
+
+    .interests{
+        margin-bottom: 60px;
+    }
+
+    .contacts{
+        margin-bottom: 60px;
+    }
+
+    .contact{
+        margin-bottom: 30px;
+    }
+
+    .contact-link{
+        padding: 8px 0 8px 42px;
+    }
+
+    .main-footer{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .main-header{
+        margin-bottom: 50px;
+    }
+
+    .intro{
+        margin-bottom: 50px;
+    }
+
+    .about{
+        margin-bottom: 50px;
+    }
+
+    .skills{
+        margin-bottom: 50px;
+    }
+
+    .interests{
+        margin-bottom: 50px;
+    }
+
+    .contacts{
+        margin-bottom: 50px;
+    }
+
+    .div-skills{
+        margin-bottom: 30px;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .flex-buttons{
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+        text-align: justify;
+    }
+
+    .contact{
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .social{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    
+    .div-skills{
+        margin-bottom: 30px;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .flex-buttons{
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+        text-align: justify;
+    }
 }
