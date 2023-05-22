@@ -35,6 +35,10 @@ body{
     margin-bottom: 120px;
 }
 
+.main-header img{
+    display: block;
+}
+
 .main-nav{
     display: flex;
 }
@@ -250,7 +254,7 @@ a{
 .container{
     min-width: 320px;
     max-width: 1280px;
-    margin: 0 auto; /*227px*/
+    margin: 0 auto;
     padding: 0 20px;
 }
 
@@ -400,6 +404,10 @@ a{
     .contacts{
         margin-bottom: 80px;
     }
+
+    .contact-link{
+        padding: 7px 0 7px 42px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -457,6 +465,10 @@ a{
         text-align: center;
     }
 
+    .main-header button{
+        border: 0;
+    }
+
     .nav-btn{
         display: block;
         width: 30px;
@@ -507,7 +519,6 @@ a{
 
     .div-skills{
         margin-bottom: 30px;
-        align-items: center;
     }
 
     .interests{
@@ -568,8 +579,8 @@ a{
     .flex-buttons{
         flex-direction: column;
         gap: 10px;
+        width: 100%;
         align-items: stretch;
-        text-align: justify;
     }
 
     .contact{
@@ -580,6 +591,7 @@ a{
 
     .social{
         flex-wrap: wrap;
+        gap: 15px;
     }
 }
 
@@ -595,7 +607,7 @@ a{
     .flex-buttons{
         flex-direction: column;
         gap: 10px;
+        width: 100%;
         align-items: stretch;
-        text-align: justify;
     }
 }
