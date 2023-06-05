@@ -16,8 +16,25 @@ body{
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
-
+    background-color: var(--white);
     color: var(--black);
+}
+
+.dark-theme{
+    --black: #CCCCCC;
+    --white: #031923;
+}
+
+.dark-theme .social-link{
+    background-color: #CCCCCC;
+}
+
+.dark-theme .contact-link_phone{
+    background-image: url("../img/dark-phone.svg");
+}
+
+.dark-theme .contact-link_mail{
+    background-image: url("../img/dark-email.svg");
 }
 
 .main-footer{
@@ -330,7 +347,7 @@ a{
 .skill-item {
     text-transform: lowercase;
 }
-.skill-item_html {
+/* .skill-item_html { 
     background-image: url("../img/html.svg");
 }
 .skill-item_css {
@@ -342,7 +359,7 @@ a{
 .skill-item_php {
     background-image: url("../img/php.svg");
 }
-
+*/
 .nav-btn{
     display: none;
 }
