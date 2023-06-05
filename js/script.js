@@ -84,7 +84,7 @@ const skills = {
             div.textContent = item.skillLevel + '%';
         
             div.style.width = item.skillLevel + '%';
-            dt.style.backgroundImage = `url("../../img/${item.iconName}")`;
+            dt.style.backgroundImage = `url("img/${item.iconName}")`;
            
             dd.append(div);
         
