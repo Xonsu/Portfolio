@@ -25,6 +25,12 @@ body{
     --white: #031923;
 }
 
+.dark-theme .main-footer{
+    background-color:  var(--white);
+    color: var(--black);
+    border-top: 1px solid var(--green);
+}
+
 .dark-theme .social-link{
     background-color: #CCCCCC;
 }
