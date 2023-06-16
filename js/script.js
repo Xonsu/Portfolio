@@ -1,6 +1,7 @@
 'use strict';
 
 const skills = {
+    isSort: " ",
     data: [ 
         {
             skillName: "html",
@@ -23,7 +24,8 @@ const skills = {
             iconName: "php.svg"
         }
     ],
-    generateList: function(skillList) {
+    generateList: function(skillList) {      
+        skillList.innerHTML = ''; 
         this.data.forEach(function(item) {
             const dt = document.createElement('dt');
             const dd = document.createElement('dd');
@@ -42,9 +44,74 @@ const skills = {
         
             skillList.append(dt, dd);
         });
+    },
+
+    getCompare: function(prop) {
+        return function(a, b) {
+            if(a[prop] < b[prop]) {
+                return -1;
+            }
+            if(a[prop] > b[prop]) {
+                return 1;
+            }
+            return 0;
+        }
+    },
+
+    sortList: function (sortItem) {
+        if(sortItem === "name") {
+            if(this.isSort !== "name") {
+                this.data.sort(this.getCompare('skillName'));
+                this.isSort = "name";
+                console.log('Сортировка данных по имени');
+            } else {
+                this.data.reverse();
+        
+                console.log('Инвертировали порядок сортировки');
+            }
+        
+            this.generateList(skillList);
+        }
+        if(sortItem === "level")
+        {
+            if(this.isSort !== "level") {
+                this.data.sort(this.getCompare('skillLevel'));
+                this.isSort = "level";
+                console.log('Сортировка данных по уровню');
+            } else {
+                this.data.reverse();
+        
+                console.log('Инвертировали порядок сортировки');
+            }
+        
+            this.generateList(skillList);    
+        }
     }
 };
 
 const skillList = document.querySelector('dl.skill-list');
 
 skills.generateList(skillList);
+
+const btns = document.querySelector('.flex-buttons');
+
+btns.addEventListener('click', (e) => {
+    let target = e.target;
+
+    if(target.nodeName === "BUTTON") {
+       
+        switch(target.dataset.type) {
+            
+            case 'name':
+                skills.sortList(target.dataset.type);
+                break;
+
+            case 'level':
+                skills.sortList(target.dataset.type);
+                break;
+
+            default:
+                console.log('Неизвестная кнопка');
+        }
+    }
+});
