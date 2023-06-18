@@ -115,3 +115,34 @@ btns.addEventListener('click', (e) => {
         }
     }
 });
+
+const mainNav = document.querySelector('.main-nav');
+
+const burgerBtn = document.querySelector('.nav-btn ');
+
+const menu = {
+    navClose: function () {
+        mainNav.classList.add('main-nav_closed');
+        burgerBtn.classList.remove('nav-btn_close');
+        burgerBtn.classList.add('nav-btn_open');
+        burgerBtn.innerHTML = '<span class="visually-hidden">Открыть меню</span>';
+    },
+
+    navOpen: function () {
+        mainNav.classList.remove('main-nav_closed');
+        burgerBtn.classList.remove('nav-btn_open');
+        burgerBtn.classList.add('nav-btn_close');
+        burgerBtn.innerHTML = '<span class="visually-hidden">Закрыть меню</span>';
+    }
+}
+
+menu.navClose();
+
+burgerBtn.addEventListener('click', (e) => {
+    if(e.target.classList.contains('nav-btn_open')){
+        menu.navOpen();
+    } else {
+        menu.navClose();
+    }
+});
+
