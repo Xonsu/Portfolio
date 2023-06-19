@@ -499,7 +499,11 @@ a{
     .nav-btn{
         display: block;
         width: 30px;
-        height: 30px;
+        height: 30px;    
+    }
+
+    .nav-btn:hover{
+        background-color: var(--white);
     }
 
     .nav-btn_close{

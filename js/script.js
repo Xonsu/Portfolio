@@ -4,23 +4,23 @@ const skills = {
     isSort: " ",
     data: [ 
         {
-            skillName: "html",
-            skillLevel: 50,
+            name: "html",
+            level: 50,
             iconName: "html.svg"
         }, 
         {
-            skillName: "css",
-            skillLevel: 40,
+            name: "css",
+            level: 40,
             iconName: "css.svg"
         }, 
         {
-            skillName: "c++",
-            skillLevel: 70,
+            name: "c++",
+            level: 70,
             iconName: "c++.svg"
         }, 
         {
-            skillName: "php",
-            skillLevel: 20,
+            name: "php",
+            level: 20,
             iconName: "php.svg"
         }
     ],
@@ -34,10 +34,10 @@ const skills = {
             dt.classList.add('skill-item');
             dd.classList.add('skill-level');
         
-            dt.textContent = item.skillName;
-            div.textContent = `${item.skillLevel}%`;
+            dt.textContent = item.name;
+            div.textContent = `${item.level}%`;
         
-            div.style.width = `${item.skillLevel}%`;
+            div.style.width = `${item.level}%`;
             dt.style.backgroundImage = `url("img/${item.iconName}")`;
            
             dd.append(div);
@@ -46,23 +46,11 @@ const skills = {
         });
     },
 
-    getCompare: function(prop) {
-        return function(a, b) {
-            if(a[prop] < b[prop]) {
-                return -1;
-            }
-            if(a[prop] > b[prop]) {
-                return 1;
-            }
-            return 0;
-        }
-    },
-
     sortList: function (sortItem) {
         if(sortItem === "name") {
-            if(this.isSort !== "name") {
-                this.data.sort(this.getCompare('skillName'));
-                this.isSort = "name";
+            if(this.isSort !== sortItem) {
+                this.data.sort(getCompare(`${sortItem}`));
+                this.isSort = sortItem;
                 console.log('Сортировка данных по имени');
             } else {
                 this.data.reverse();
@@ -74,9 +62,9 @@ const skills = {
         }
         if(sortItem === "level")
         {
-            if(this.isSort !== "level") {
-                this.data.sort(this.getCompare('skillLevel'));
-                this.isSort = "level";
+            if(this.isSort !== sortItem) {
+                this.data.sort(getCompare(`${sortItem}`));
+                this.isSort = sortItem;
                 console.log('Сортировка данных по уровню');
             } else {
                 this.data.reverse();
@@ -99,22 +87,23 @@ btns.addEventListener('click', (e) => {
     let target = e.target;
 
     if(target.nodeName === "BUTTON") {
-       
-        switch(target.dataset.type) {
-            
-            case 'name':
-                skills.sortList(target.dataset.type);
-                break;
-
-            case 'level':
-                skills.sortList(target.dataset.type);
-                break;
-
-            default:
-                console.log('Неизвестная кнопка');
-        }
+        skills.sortList(target.dataset.type);
+    } else {
+        console.log("Неизвестная кнопка");
     }
 });
+
+function getCompare(prop) {
+    return function(a, b) {
+        if(a[prop] < b[prop]) {
+            return -1;
+        }
+        if(a[prop] > b[prop]) {
+            return 1;
+        }
+        return 0;
+    }
+}
 
 const mainNav = document.querySelector('.main-nav');
 
