@@ -115,4 +115,3 @@ burgerBtn.addEventListener('click', (e) => {
         menu.navClose();
     }
 });
-
