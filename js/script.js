@@ -47,33 +47,16 @@ const skills = {
     },
 
     sortList: function (sortItem) {
-        if(sortItem === "name") {
             if(this.isSort !== sortItem) {
                 this.data.sort(getCompare(`${sortItem}`));
                 this.isSort = sortItem;
-                console.log('Сортировка данных по имени');
+                console.log(`Сортировка данных по ${sortItem}`);
             } else {
                 this.data.reverse();
         
                 console.log('Инвертировали порядок сортировки');
             }
-        
             this.generateList(skillList);
-        }
-        if(sortItem === "level")
-        {
-            if(this.isSort !== sortItem) {
-                this.data.sort(getCompare(`${sortItem}`));
-                this.isSort = sortItem;
-                console.log('Сортировка данных по уровню');
-            } else {
-                this.data.reverse();
-        
-                console.log('Инвертировали порядок сортировки');
-            }
-        
-            this.generateList(skillList);    
-        }
     }
 };
 
@@ -88,8 +71,6 @@ btns.addEventListener('click', (e) => {
 
     if(target.nodeName === "BUTTON") {
         skills.sortList(target.dataset.type);
-    } else {
-        console.log("Неизвестная кнопка");
     }
 });
 

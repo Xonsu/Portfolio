@@ -503,7 +503,7 @@ a{
     }
 
     .nav-btn:hover{
-        background-color: var(--white);
+        background-color: transparent;
     }
 
     .nav-btn_close{
