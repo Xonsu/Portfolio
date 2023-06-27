@@ -2,28 +2,8 @@
 
 const skills = {
     isSort: " ",
-    data: [ 
-        {
-            name: "html",
-            level: 50,
-            iconName: "html.svg"
-        }, 
-        {
-            name: "css",
-            level: 40,
-            iconName: "css.svg"
-        }, 
-        {
-            name: "c++",
-            level: 70,
-            iconName: "c++.svg"
-        }, 
-        {
-            name: "php",
-            level: 20,
-            iconName: "php.svg"
-        }
-    ],
+    data: [],
+
     generateList: function(skillList) {      
         skillList.innerHTML = ''; 
         this.data.forEach(function(item) {
@@ -57,12 +37,27 @@ const skills = {
                 console.log('Инвертировали порядок сортировки');
             }
             this.generateList(skillList);
+    },
+
+    initList: function(url, parentElement, skillSection) {
+        fetch(url)
+            .then(data => data.json())
+            .then(object => {
+                this.data = object;
+                this.generateList(parentElement);
+            })
+            .catch(() => {
+                console.error('Fail');
+                skillSection.remove();
+            });
     }
 };
 
 const skillList = document.querySelector('dl.skill-list');
 
-skills.generateList(skillList);
+const skillSec = document.querySelector('.skills');
+
+skills.initList('db/skills.json', skillList, skillSec);
 
 const btns = document.querySelector('.flex-buttons');
 

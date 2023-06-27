@@ -1,0 +1,22 @@
+    [
+        {
+            "name": "html",
+            "level": 50,
+            "iconName": "html.svg"
+        },
+        {
+            "name": "css",
+            "level": 40,
+            "iconName": "css.svg"
+        }, 
+        {
+            "name": "c++",
+            "level": 70,
+            "iconName": "c++.svg"
+        }, 
+        {
+            "name": "php",
+            "level": 20,
+            "iconName": "php.svg"
+        }
+    ]
