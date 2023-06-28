@@ -30,11 +30,8 @@ const skills = {
             if(this.isSort !== sortItem) {
                 this.data.sort(getCompare(`${sortItem}`));
                 this.isSort = sortItem;
-                console.log(`Сортировка данных по ${sortItem}`);
             } else {
                 this.data.reverse();
-        
-                console.log('Инвертировали порядок сортировки');
             }
             this.generateList(skillList);
     },
